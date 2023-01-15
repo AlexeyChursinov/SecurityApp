@@ -2,6 +2,7 @@ package ru.chursinov.SecurityApp.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -30,6 +31,9 @@ public class Person {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "role")
+    private String role;
 
     public Person(String username, int yearOfBirth) {
         this.username = username;
